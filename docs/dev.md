@@ -5,7 +5,7 @@ with all the concepts in all the text and links in this page (except for the
 examples for code structure, which are on a need-to-know basis, and the source
 pages from the extracted paragraphs that you will find pasted inline).
 
-## Using version control
+## Using version control (git)
 
 We use git for version control. If you're not familiar with git, [this is a good place to start](https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/), and [this is a fantastic follow-up](http://think-like-a-git.net/). 
 
