@@ -1,4 +1,4 @@
-![Build Status](https://gitlab.com/bu_cnio/docs/badges/master/build.svg)
+[![build status](https://gitlab.com/bu_cnio/bu_cnio.gitlab.io/badges/master/pipeline.svg)](https://gitlab.com/bu_cnio/bu_cnio.gitlab.io/-/commits/master)
 
 ---
 
@@ -36,12 +36,12 @@ pages:
 To work locally with this project, you'll have to follow the steps below:
 
 1. Fork, clone or download this project
-1. [Install][] MkDocs
+1. Install MkDocs
 1. Preview your project: `mkdocs serve`,
    your site can be accessed under `localhost:8000`
 1. Add content
 1. Generate the website: `mkdocs build` (optional)
 
-Read more at MkDocs [documentation][].
+Read more at MkDocs [documentation](https://www.mkdocs.org/).
 
 ---
