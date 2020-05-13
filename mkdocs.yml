@@ -4,4 +4,8 @@ theme: readthedocs
 
 nav:
   - Home: index.md
-  - 'Development guidelines': dev.md
+  - Development:
+    - 'Development guidelines': dev.md
+  - 'systems administration':
+    - 'Common tasks':
+      - 'Set up new workstations': admin/tasks.md
