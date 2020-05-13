@@ -1,11 +1,15 @@
 site_name: CNIO Bioinformatics Unit documentation
 site_url: https://bu_cnio.gitlab.io
 theme: readthedocs
+markdown_extensions:
+  - admonition
 
 nav:
   - Home: index.md
   - Development:
     - 'Development guidelines': dev.md
+  - Cluster:
+    - 'Cluster usage guide': cluster/usage.md
   - 'systems administration':
     - 'Common tasks':
       - 'Set up new workstations': admin/tasks.md
