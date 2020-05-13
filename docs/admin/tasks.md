@@ -8,16 +8,14 @@ If it's a new workstation, we need to connect it to the CNIO LDAP server first. 
 
 ### Install required packages (leave all options as default when prompted)
 
-  $ sudo apt-get update
-  $ sudo apt-get -y install libnss-ldap libpam-ldap ldap-utils nscd
+    $ sudo apt-get update
+    $ sudo apt-get -y install libnss-ldap libpam-ldap ldap-utils nscd
   
 ### Update /etc/nsswitch.conf
 
-<code>
-passwd:         compat ldap
-group:          compat ldap
-shadow:         compat ldap
-</code>
+    passwd:         compat ldap
+    group:          compat ldap
+    shadow:         compat ldap
 
 ### Replace contents in /etc/ldap.conf
 
@@ -58,7 +56,7 @@ shadow:         compat ldap
 
 ### Restart nscd service
 
-  $ sudo service nscd restart
+    $ sudo service nscd restart
 
 ### Verify LDAP login
     $ getent passwd ldapuser
@@ -85,7 +83,7 @@ Install nfs-common if not already available:
 
 #### Install required packages
 
-  $ sudo apt-get -y install autofs
+    $ sudo apt-get -y install autofs
 
 #### Add a /home alias to /etc/auto.master (if it's not there yet)
 
