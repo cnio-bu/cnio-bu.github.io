@@ -13,7 +13,7 @@ The first rule of the cluster is: you use the queueing system. **Commands should
 
 ## Cluster resources
 
-![Topology](img/cluster_topo.png)
+![Topology](../img/cluster_topo.png)
 
 ## Submitting jobs
 
