@@ -1,0 +1,7 @@
+site_name: CNIO Bioinformatics Unit documentation
+site_url: https://bu_cnio.gitlab.io
+theme: readthedocs
+
+nav:
+  - Home: index.md
+  - 'Development guidelines': dev.md
