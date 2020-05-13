@@ -2,7 +2,7 @@
 
 ---
 
-This project generates the BU_CNIO docs website located at [https://bu_cnio.gitlab.io]()
+This project generates the BU_CNIO docs website located at [https://bu_cnio.gitlab.io](https://bu_cnio.gitlab.io)
 
 ---
 
