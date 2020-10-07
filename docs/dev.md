@@ -9,6 +9,8 @@ pages from the extracted paragraphs that you will find pasted inline).
 
 We use git for version control. If you're not familiar with git, [this is a good place to start](https://www.freecodecamp.org/news/what-is-git-and-how-to-use-it-c341b049ae61/), and [this is a fantastic follow-up](http://think-like-a-git.net/). 
 
+There are some good interactive resources to learn [git in general](https://gitexercises.fracz.com/), and [git branching in particular](https://learngitbranching.js.org/).
+
 ## Where to put your code
 
 We have a [gitlab group for the Unit](https://gitlab.com/bu_cnio/) for hosting and managing our code.
