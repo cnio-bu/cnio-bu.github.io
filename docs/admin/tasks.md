@@ -1,8 +1,13 @@
 # Setting up workstation users
 
-If it's a new workstation, we need to connect it to the CNIO LDAP server first. Afterwards, or if it's already connected, we need to add the user to the autofs config file.
+!!! Note
 
-**NOTE:** If it's a new user, we need to send a ticket (incidencia) to IT for them to a) enable the user for Linux and b) create the shared home (specify both).
+    If it's a new user, you'll need to send a ticket (incidencia) to IT for them to a) enable the user for Linux and b) create the shared home (specify both).
+
+!!! Warning
+
+    The cnio username ("xxxx" in "xxxx@cnio.es") should not exist locally on the machine or it will clash with the remote one.
+    If you used the same username for the installation of the OS you will first need to remove it from the local machine.
 
 ## LDAP
 
@@ -32,7 +37,11 @@ Use the contents of [this file](https://gitlab.com/bu_cnio/bu_cnio.gitlab.io/-/s
 
 ## CNIO shared homes
 
-Home mounting was originally done with autofs. It does not play well with systemd and the long delays on network uplinks, so it's a bit of a mess in Ubuntu 18. I'm therefore now doing the old-fashioned fstab mounting.
+Home mounting was originally done with autofs. It does not play well with systemd and the long delays on network uplinks, so it's a bit of a mess in Ubuntu (tested on 18). The "classic" fstab mounting is therefore preferred.
+
+!!! Warning
+
+    The "classic" and the autofs mounts are mutually exclusive. You need to set up one or the other. Otherwise you'll have conflicts and problems will arise.
 
 ### Classic mount
 
