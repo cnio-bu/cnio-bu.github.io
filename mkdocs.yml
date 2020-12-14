@@ -3,13 +3,15 @@ site_url: https://bu_cnio.gitlab.io
 theme: readthedocs
 markdown_extensions:
   - admonition
+extra_css:
+  - css/main.css
 
 nav:
   - Home: index.md
   - Development:
     - 'Development guidelines': dev.md
-  - Cluster:
-    - 'Cluster usage guide': cluster/usage.md
+  - HPC resources:
+    - 'CNIO HPC cluster': hpc/cluster.md
   - 'systems administration':
     - 'Common tasks':
       - 'Set up new workstations': admin/tasks.md
