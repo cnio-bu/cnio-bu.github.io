@@ -96,6 +96,21 @@ The more you request, the less priority you'll have for future jobs.
 
 You can check how efficiently a job used its assigned resources with the `seff <jobid>` command (once the job is finished).
 
+#### Snakemake profile
+
+The cluster features a Snakemake profile that allows for the automatic submision and management of jobs.
+To use it, just add the `--profile slurm` argument to your Snakemake command.
+
+!!! Note
+
+    In order to indicate the resources required by each Snakemake rule you should use the [threads](https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#threads)
+    and [resources](https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#resources) options.
+
+!!! Note
+
+    The Snakemake command will remain active while your jobs run, so it's recommended that you launch it inside a detachable terminal emulator (e.g. GNU Screen)
+    so you can disconnect from the cluster and keep your jobs running.
+
 ### Installing software
 
 Software management is left up to the user, and we recommend doing it with
