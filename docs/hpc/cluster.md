@@ -62,6 +62,30 @@ input files, execute, copy your output files, and delete everything.
 Home directories are not volatile, but data safety is not guaranteed in
 the long term (so keep backups).
 
+### Copying data to/from the cluster
+
+The most efficient way of copying large amounts of data is by using `rsync`. `rsync` allows
+you to resume a transfer in case something goes wrong.
+
+To transfer a directory to the cluster using `rsync` you would do something like:
+
+```bash
+rsync -avx --progress mydirectory/ cluster1:/storage/scratch01/myuser/mydirectory/
+```
+
+!!! Note
+
+    Pay attention to the trailing slashes, which completely change rsync's behaviour if missing.
+
+For small transfers you could also use `scp` if you prefer:
+
+```bash
+scp -r mydirectory/ cluster1:/storage/scratch01/myuser/
+```
+
+In both cases you can revert the order of the local and remote directory to copy from
+the cluster to your local computer instead.
+
 ### Submitting jobs
 
 !!! Warning
