@@ -33,7 +33,7 @@ The cluster's hostname is `cluster1.cnio.es` (`cluster1` for short), and can be 
 
 !!! Note
 
-    If you'd like to SSH into the cluster throught the CNIO VPN you will need to ask IT for access.
+    If you'd like to SSH into the cluster through the CNIO VPN you will need to ask IT for VPN access.
 
 ### Storage
 
