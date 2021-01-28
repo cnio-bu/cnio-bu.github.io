@@ -1,7 +1,3 @@
-[![build status](https://gitlab.com/bu_cnio/bu_cnio.gitlab.io/badges/master/pipeline.svg)](https://gitlab.com/bu_cnio/bu_cnio.gitlab.io/-/commits/master)
-
----
-
 This project generates the BU_CNIO docs website located at [https://bu_cnio.gitlab.io](https://bu_cnio.gitlab.io)
 
 ---
