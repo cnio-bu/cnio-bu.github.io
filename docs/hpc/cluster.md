@@ -123,7 +123,7 @@ You can check how efficiently a job used its assigned resources with the `seff <
 #### Snakemake profile
 
 The cluster features a Snakemake profile that allows for the automatic submision and management of jobs.
-To use it, just add the `--profile $SLURM_PROFILE` argument to your Snakemake command.
+To use it, just add the `--profile $SMK_PROFILE_SLURM` argument to your Snakemake command.
 
 !!! Note
 
