@@ -19,7 +19,7 @@ hm001 | 224  | 2Tb
 
 ### Introduction to HPC
 
-[See this tutorial](https://hpc-carpentry.github.io/hpc-intro/) for an introduction to HPC concepts and usage
+[See this tutorial](https://carpentries-incubator.github.io/hpc-intro/) for an introduction to HPC concepts and usage
 (**highly** recommended if you have little or no experience in using HPC environments).
 
 ### Requesting access
