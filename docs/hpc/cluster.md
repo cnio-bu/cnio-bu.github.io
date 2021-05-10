@@ -142,3 +142,8 @@ Software management is left up to the user, and we recommend doing it by install
 
 If you're completely unfamiliar with conda and bioconda, we recommend following
 [this tutorial](https://bioconda.github.io/tutorials/index.html).
+
+!!! Note
+
+    Remember to use your home directory to install software (including conda),
+    as lustre performs poorly when reading small files often.
