@@ -11,6 +11,7 @@ nav:
   - Development:
     - 'Development guidelines': dev.md
   - HPC resources:
-    - 'CNIO HPC cluster': hpc/cluster.md
+    - 'Usage': hpc/usage.md
+    - 'Administration': hpc/admin.md
   - 'systems administration':
     - 'Set up new workstations': admin/tasks.md
