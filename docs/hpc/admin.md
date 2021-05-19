@@ -2,7 +2,7 @@
 
 ## Task management
 
-We manage admin tasks using Gitlab issues in the ["HPC Admin Scripts" project](https://gitlab.com/bu_cnio/hpc/admin-scripts/-/boards).
+We manage admin tasks using Gitlab issues in the ["HPC Admin Scripts" project](https://gitlab.com/bu_cnio/hpc/admin/-/boards).
 
 ### General workflow
 
