@@ -1,5 +1,8 @@
 site_name: CNIO Bioinformatics Unit documentation
 site_url: https://bu_cnio.gitlab.io
+repo_url: https://gitlab.com/bu_cnio/bu_cnio.gitlab.io
+edit_uri: blob/master/docs/
+
 theme: readthedocs
 markdown_extensions:
   - admonition
