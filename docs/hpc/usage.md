@@ -54,6 +54,16 @@ You have an inital allocation of 1Tb in your "scratch" directory, located at
 
 Input and output of any computation that you do in the cluster should be stored there.
 
+#### Checking your quotas
+
+You can check your current quotas with the following commands:
+
+```bash
+$ zfs get userquota@$(whoami) homepool/home #check your home quota
+
+$ lfs quota -u $(whoami) -h /storage/scratch01/ #check your scratch quota
+```
+
 #### Data availability and security
 
 Scratch space is to be considered "volatile": you should copy your
