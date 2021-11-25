@@ -100,8 +100,9 @@ the cluster to your local computer instead.
 
 !!! Warning
 
-    As a general rule, no heavy processes should be run on the login nodes. Jobs
-    run there have a limit of 2Gb RAM and 30 minutes.
+    As a general rule, no heavy processes should be run directly on the login nodes. Jobs
+    run there have a limit of 2Gb RAM and 30 minutes. Instead you should use the "sbatch"
+    or "srun" commands to send them to the compute nodes. See examples below.
 
 The command structure to send a job to the queue is the following:
 
