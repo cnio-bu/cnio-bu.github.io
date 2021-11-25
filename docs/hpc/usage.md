@@ -142,7 +142,7 @@ To use it, just add the `--profile $SMK_PROFILE_SLURM` argument to your Snakemak
 
 !!! Note
 
-    The Snakemake command will remain active while your jobs run, so it's recommended that you launch it inside a detachable terminal emulator (e.g. GNU Screen)
+    The Snakemake command will remain active while your jobs run, so it's recommended that you launch it inside a detachable terminal emulator (e.g. [GNU Screen](https://www.nixtutor.com/linux/introduction-to-gnu-screen/))
     so you can disconnect from the cluster and keep your jobs running.
 
 ### Installing software
