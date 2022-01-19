@@ -150,10 +150,11 @@ To use it, just add the `--profile $SMK_PROFILE_SLURM` argument to your Snakemak
 ### Installing software
 
 Software management is left up to the user, and we recommend doing it by installing
-[conda and bioconda](http://bioconda.github.io/user/install.html).
+[mambaforge](https://github.com/conda-forge/miniforge#mambaforge) and the [bioconda channels](https://bioconda.github.io/user/install.html#set-up-channels).
 
 If you're completely unfamiliar with conda and bioconda, we recommend following
-[this tutorial](https://bioconda.github.io/tutorials/index.html).
+[this tutorial](https://bioconda.github.io/tutorials/index.html). Notice that the tutorial 
+uses miniconda, which is equivalent to the recommended mambaforge.
 
 !!! Note
 
