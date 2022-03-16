@@ -127,8 +127,12 @@ into smaller jobs if it takes longer than ~8 hours.
 The resources you request for a job will influence the chances that such job has to enter the queue, compared to others:
 the more resources you request, the longer you may have to wait for those resources to be available.
 
-In addition, the future priority of your jobs will also be influenced by the resources you *request* (not *use*, *request*, even if you don't use them in the end).
-The more you request, the less priority you'll have for future jobs.
+In addition, the future priority of your jobs will also be influenced by the resources you *request* (not *use*, *request*, even if you don't use them in the end): the more you request, the less priority you'll have for future jobs.
+
+If one of your jobs has lower priority than another one, but its running time would not
+delay that higher priority one from entering the queue **and** there are enough resources for it,
+your job could enter the queue first. That's why it's important to try and assign reasonably accurate
+time limits (a.k.a. *walltimes*) to your jobs.
 
 You can check how efficiently a job used its assigned resources with the `seff <jobid>` command (once the job is finished).
 
