@@ -8,16 +8,16 @@ Diagram can be edited with [diagrams.net](https://app.diagrams.net/) using the
 source code available [here](../img/cluster1_racks.drawio)
 
 ## Checking and restarting nodes
-A given node status can be checked out with:
-
-```
-scontrol show node NODENAME
-```
-
 For a full list of all available nodes, type:
 
 ```
 scontrol show node
+```
+
+A given node status can be checked out with:
+
+```
+scontrol show node NODENAME
 ```
 
 Sometimes, a node state will change to _DRAIN_ for multiple reasons: i.e. slurm
@@ -28,4 +28,3 @@ admin privileges:
 ```
 scontrol update NodeName=NODENAME State=RESUME
 ```
-
