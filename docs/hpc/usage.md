@@ -151,6 +151,15 @@ To use it, just add the `--profile $SMK_PROFILE_SLURM` argument to your Snakemak
     The Snakemake command will remain active while your jobs run, so it's recommended that you launch it inside a detachable terminal emulator (e.g. [GNU Screen](https://www.nixtutor.com/linux/introduction-to-gnu-screen/))
     so you can disconnect from the cluster and keep your jobs running.
 
+#### Interactive sessions
+
+During development and testing you may want to be able to run command interactively. You can request
+an interactive session, which will run on a node, using the `srun` command with the `--pty` argument.
+
+For example, to request a 2-hour session with 4Gb RAM and 2 CPUs, you would do:
+
+`srun --mem=4096 -c 2 -t 120 --pty /bin/bash`
+
 ### Installing software
 
 Software management is left up to the user, and we recommend doing it by installing
