@@ -1,31 +1,4 @@
-This project generates the BU_CNIO docs website located at [https://bu_cnio.gitlab.io](https://bu_cnio.gitlab.io)
-
----
-
-## GitLab CI
-
-This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
-
-```
-image: python:3.8-buster
-
-before_script:
-  - pip install mkdocs
-  ## Add your custom theme if not inside a theme_dir
-  ## (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-  # - pip install mkdocs-material
-
-pages:
-  script:
-  - mkdocs build
-  - mv site public
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
-```
+This project generates the BU_CNIO docs website located at https://cnio-bu.github.io
 
 ## Building locally
 
