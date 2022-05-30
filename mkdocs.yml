@@ -1,9 +1,19 @@
 site_name: CNIO Bioinformatics Unit documentation
-site_url: https://bu_cnio.gitlab.io
-repo_url: https://gitlab.com/bu_cnio/bu_cnio.gitlab.io
-edit_uri: blob/master/docs/
+site_url: https://cnio-bu.github.io
+repo_url: https://github.com/cnio-bu/cnio-bu.github.io
 
-theme: readthedocs
+theme:
+  name: 'material'
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
 markdown_extensions:
   - admonition
 extra_css:

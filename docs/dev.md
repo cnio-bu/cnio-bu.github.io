@@ -13,9 +13,9 @@ There are some good interactive resources to learn [git in general](https://gite
 
 ## Where to put your code
 
-We have a [gitlab group for the Unit](https://gitlab.com/bu_cnio/) for hosting and managing our code.
+We have a [github group for the Unit](https://github.com/cnio-bu/) for hosting and managing our code.
 
-To gain access, you simply need to create a gitlab user, go to the [group page](https://gitlab.com/bu_cnio/), and request access.
+If you're a member or collaborator of the Bioinformatics Unit and wish to gain access, you simply need to create a GitHub user and either contact a BU member, or [create an issue to request access](https://github.com/cnio-bu/cnio-bu.github.io/issues).
 
 ## How to organise and manage your code
 
