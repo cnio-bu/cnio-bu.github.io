@@ -1,4 +1,7 @@
-This project generates the BU_CNIO docs website located at https://cnio-bu.github.io
+![Publish docs](https://github.com/cnio-bu/cnio-bu.github.io/actions/workflows/gh-pages.yml/badge.svg)
+
+This project generates the CNIO Bioinformatics Unit docs
+website located at https://cnio-bu.github.io
 
 ## Building locally
 
