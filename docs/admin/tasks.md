@@ -85,7 +85,7 @@ Install nfs-common if not already available:
 
 #### Edit /etc/fstab
 
-    lando.cnio.es:/ifs/data/CNIO/Homes/<user> /home/<user> nfs  auto,noatime,nolock,bg,nfsvers=3,tcp,intr,_netdev,x-systemd.automount,x-systemd.after=network-online.target,x-systemd.device-timeout=240      0       0
+    lando.cnio.es:/homes/<user> /home/<user> nfs  auto,noatime,nolock,bg,nfsvers=3,tcp,intr,_netdev,x-systemd.automount,x-systemd.after=network-online.target,x-systemd.device-timeout=240      0       0
 
 ### autofs
 
@@ -104,5 +104,5 @@ Install nfs-common if not already available:
 
     $ vi /etc/auto.home
     ...
-    username      lando.cnio.es:/ifs/data/CNIO/Homes/username
+    username      lando.cnio.es:/homes/username
     ...
