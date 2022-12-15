@@ -124,6 +124,12 @@ into smaller jobs if it takes longer than ~8 hours.
 
 ##### Resources and their effect on job priority
 
+!!! Note
+    
+    You should always split your jobs in the smallest possible unit: always
+    prefer submitting single-sample jobs independently instead of submitting a
+    loop that analyses many samples.
+
 The resources you request for a job will influence the chances that such job has to enter the queue, compared to others:
 the more resources you request, the longer you may have to wait for those resources to be available.
 
