@@ -36,6 +36,12 @@ The cluster's hostname is `cluster1.cnio.es` (`cluster1` for short), and can be 
 
     If you'd like to SSH into the cluster through the CNIO VPN you will need to ask IT for VPN access.
 
+### Mailing list
+
+Important notifications about the cluster are sent to the CNIO HPC mailing
+list. Make sure to [subscribe using this link](https://lists.cnio.es/wws/subscribe/hpc)
+to stay up to date. The list has very low traffic.
+
 ### Storage
 
 #### Home directories
