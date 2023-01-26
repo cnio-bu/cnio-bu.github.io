@@ -125,8 +125,21 @@ For example, to submit the command `bwa index mygenome.fasta` as a job:
 
 `-c`, `--mem`, and `-t` tell the system how many cores, RAM memory, and time your job will need.
 
-There is a limit of 24 hours per job. As a general rule, you should try to break down your job
-into smaller jobs if it takes longer than ~8 hours.
+##### Time limits
+
+As a general rule, you should try to break down your job into smaller jobs if it takes longer than ~8 hours.
+
+If no time limit is specified, a default of 30 minutes will be assigned
+automatically.
+
+The "short" queue has a limit of 2 hours per job and the highest priority
+(i.e. jobs in this queue will run sooner compared to other queues).
+
+The "main" queue has a limit of 24 hours per job and medium priority. 
+
+The "long" queue has a limit of 168 hours (7 days) per job and 4 concurrent
+jobs, and the lowest priority.
+
 
 ##### Resources and their effect on job priority
 
