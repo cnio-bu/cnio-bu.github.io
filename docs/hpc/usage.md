@@ -165,12 +165,16 @@ To use it, just add the `--profile $SMK_PROFILE_SLURM` argument to your Snakemak
 
 #### Interactive sessions
 
-During development and testing you may want to be able to run command interactively. You can request
-an interactive session, which will run on a node, using the `srun` command with the `--pty` argument.
+During development and testing you may want to be able to run commands interactively. You can request
+an interactive session, which will run on a compute node, using the `srun` command with the `--pty` argument.
 
 For example, to request a 2-hour session with 4Gb RAM and 2 CPUs, you would do:
 
 `srun --mem=4096 -c 2 -t 120 --pty /bin/bash`
+
+!!! Note
+
+    Interactive sessions are limited to a maximum of 120 minutes.
 
 ### Installing software
 
