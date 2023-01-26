@@ -131,7 +131,12 @@ For example, to submit the command `bwa index mygenome.fasta` as a job:
 
 ##### Time limits
 
-As a general rule, you should try to break down your job into smaller jobs if it takes longer than ~8 hours.
+!!! Note
+
+    Ideally, you should aim at your jobs having a duration of between 1 and 8 hours.
+    Shorter jobs may cause too much scheduling overhead, and longer jobs
+    will make it harder for the scheduler to optimally schedule jobs into the
+    queues.
 
 If no time limit is specified, a default of 30 minutes will be assigned
 automatically.
@@ -146,12 +151,6 @@ jobs, and the lowest priority.
 
 
 ##### Resources and their effect on job priority
-
-!!! Note
-    
-    You should always split your jobs in the smallest possible unit: always
-    prefer submitting single-sample jobs independently instead of submitting a
-    loop that analyses many samples.
 
 The resources you request for a job will influence the chances that such job has to enter the queue, compared to others:
 the more resources you request, the longer you may have to wait for those resources to be available.
