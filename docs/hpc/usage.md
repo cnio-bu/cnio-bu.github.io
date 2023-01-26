@@ -42,6 +42,10 @@ Important notifications about the cluster are sent to the CNIO HPC mailing
 list. Make sure to [subscribe using this link](https://lists.cnio.es/wws/subscribe/hpc)
 to stay up to date. The list has very low traffic.
 
+!!! Note
+
+    Do subscribe to the list!
+
 ### Storage
 
 #### Home directories
