@@ -8,11 +8,12 @@ These are some guidelines to using our HPC cluster and the Slurm workflow system
 
 The cluster currently features 8 compute nodes with the following configurations:
 
- Node | CPUs | RAM
------ | ---- | ----
-bc001 | 24   | 32Gb
-bc00[2-7] | 52   | 512Gb
-hm001 | 224  | 2Tb
+ Node | CPUs | RAM | GPUs
+----- | ---- | ---- | ----
+bc001 | 24   | 32Gb | -
+bc00[2-7] | 52   | 512Gb | -
+hm001 | 224  | 2Tb | -
+gp001 | 224  | 2Tb | 2 x Nvidia A100 80Gb
 
 <br />
 
@@ -191,6 +192,24 @@ For example, to request a 2-hour session with 4Gb RAM and 2 CPUs, you would do:
 !!! Note
 
     Interactive sessions are limited to a maximum of 120 minutes.
+
+#### GPUs
+
+!!! Warning
+
+    GPU access is currently being tested and should be requested to
+    [hpc-admin@lists.cnio.es](mailto:hpc-admin@lists.cnio.es).
+
+    All GPU-related information is subject to change.
+
+The cluster features two Nvidia A100 GPUs, each split into 4 instances with 20Gb of VRAM, for a total of 8x20Gb instances.
+
+To run a command using GPUs you need to specify the `gpu` partition, and request
+the number of instances you require using the
+`--gres=gpu:1g.20gb:<number_of_instances>` argument of sbatch. Here's an example
+to request two instances:
+
+`sbatch -p gpu --gres=gpu:1g.20gb:2 "python train_my_net.py"`
 
 ### Installing software
 
