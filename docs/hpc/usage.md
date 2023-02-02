@@ -13,7 +13,7 @@ The cluster currently features 8 compute nodes with the following configurations
 bc001 | 24   | 32Gb | -
 bc00[2-7] | 52   | 512Gb | -
 hm001 | 224  | 2Tb | -
-gp001 | 224  | 2Tb | 2 x Nvidia A100 80Gb
+gp001 | 112  | 768Gb | 2 x Nvidia A100 80Gb
 
 <br />
 
