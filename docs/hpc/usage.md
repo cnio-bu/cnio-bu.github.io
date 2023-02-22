@@ -209,7 +209,7 @@ the number of instances you require using the
 `--gres=gpu:1g.20gb:<number_of_instances>` argument of sbatch. Here's an example
 to request two instances:
 
-`sbatch -p gpu --gres=gpu:1g.20gb:2 "python train_my_net.py"`
+`sbatch -p gpu --gres=gpu:1g.20gb:2 --wrap "python train_my_net.py"`
 
 ### Installing software
 
