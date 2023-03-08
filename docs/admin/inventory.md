@@ -22,9 +22,9 @@
 |tdidomenico | Tomás Di Domenico | Unidad de Bioinformática | viper         | 10.222.113.30 |
 |sagarcia | Santiago García Martín | Unidad de Bioinformática | azura         | 10.222.113.32 |
 |mmoradiellos | Manuel Moradiellos Corpus | Grupo de Computacional Cancer Genomics | gojira         | 10.222.113.27 |
+|lserranor | Laura Serrano Ron | Unidad de Bioinformática | rafiki         | 10.222.113.129 |
 |- | - | - | himalaya         | 10.222.112.49 |
 |- | - | - | alytes         | 10.222.112.109 |
 |- | - | - | moriarti         | 10.222.112.142 |
 |- | - | - | tomate         | 10.222.112.139 |
-|- | - | - | drbacterio         | 10.222.113.129 |
 |- | - | - | enllamas         | - |
