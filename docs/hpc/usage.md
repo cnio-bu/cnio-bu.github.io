@@ -59,6 +59,15 @@ to stay up to date. The list has very low traffic.
     Using your home for this will likely hang your jobs and corrupt your files. You should use the
     *scratch* space instead.
 
+!!! Warning
+
+    Scratch space is to be considered "volatile": you should copy your
+    input files, execute, copy your output files, and delete everything.
+
+    Home directories are not volatile, but data safety is not guaranteed in
+    the long term (so keep backups).
+
+
 #### Home directories
 
 You have an allocation of 300Gb in your home directory, located in
@@ -95,14 +104,6 @@ $ lfs quota -p <project id> -h /storage/scratch01/ #check your project quota
     We are currently reimplementing the way quotas are managed. For now you'll
     need to request your project id from the administrators if you'd like to
     check project-level quotas.
-
-#### Data availability and security
-
-Scratch space is to be considered "volatile": you should copy your
-input files, execute, copy your output files, and delete everything.
-
-Home directories are not volatile, but data safety is not guaranteed in
-the long term (so keep backups).
 
 ### Copying data to/from the cluster
 
