@@ -49,22 +49,34 @@ to stay up to date. The list has very low traffic.
 
 ### Storage
 
+!!! Warning
+
+    There are two types of storage in the cluster: your home directory and scratch
+    space.
+
+    Your home directory is well suited for storing software (e.g. installing conda), configuration files, etc.
+    It is however **not** quick enough to store the input or output files of your analyses.
+    Using your home for this will likely hang your jobs and corrupt your files. You should use the
+    *scratch* space instead.
+
 #### Home directories
 
-You have an initial allocation of 300Gb in your home directory.
-
-This space is well suited for for storing software (e.g. conda), configuration files, etc.
-
-It is however **not** quick enough to store the input or output files of your analyses.
-Using your home for this will likely hang your jobs and corrupt your files, and you should use the
-*scratch* space instead.
+You have an allocation of 300Gb in your home directory, located in
+`/home/<yourusername>/`.
 
 #### Scratch space
 
-You have an inital allocation of 1Tb in your "scratch" directory, located at
+##### User space
+
+You have an allocation of 500Gb in your "scratch" directory, located at
 `/storage/scratch01/users/<yourusername>/`.
 
-Input and output of any computation that you do in the cluster should be stored there.
+This space is meant to be used for testing and ephimeral compute operations.
+
+##### Project space
+
+To request high-performance scratch space for a new project please fill the
+[storage request form](https://cnio-hpc.limequery.com/826326).
 
 #### Checking your quotas
 
@@ -74,7 +86,15 @@ You can check your current quotas with the following commands:
 $ zfs get userquota@$(whoami) homepool/home #check your home quota
 
 $ lfs quota -u $(whoami) -h /storage/scratch01/ #check your scratch quota
+
+$ lfs quota -p <project id> -h /storage/scratch01/ #check your project quota
 ```
+
+!!! Note
+
+    We are currently reimplementing the way quotas are managed. For now you'll
+    need to request your project id from the administrators if you'd like to
+    check project-level quotas.
 
 #### Data availability and security
 
