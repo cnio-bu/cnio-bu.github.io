@@ -171,6 +171,10 @@ The "main" queue has a limit of 24 hours per job and medium priority.
 The "long" queue has a limit of 168 hours (7 days) per job and 4 concurrent
 jobs, and the lowest priority.
 
+!!! Note
+
+    You can specify the partition (queue) you want to use with the `-p` argument
+    to `sbatch` or `srun`.
 
 ##### Resources and their effect on job priority
 
