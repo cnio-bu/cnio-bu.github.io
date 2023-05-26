@@ -183,10 +183,17 @@ time limits (a.k.a. *walltimes*) to your jobs.
 
 You can check how efficiently a job used its assigned resources with the `seff <jobid>` command (once the job is finished).
 
-#### Snakemake profile
+#### Snakemake executor for Slurm
 
-The cluster features a Snakemake profile that allows for the automatic submision and management of jobs.
-To use it, just add the `--profile $SMK_PROFILE_SLURM` argument to your Snakemake command.
+!!! Warning
+
+    The previous way of having Snakemake send jobs to the nodes using a profile (`--profile $SMK_PROFILE_SLURM`)
+    is still functional but is deprecated. You should ideally move to the native executor described below, and report
+    any issues to the list. 
+
+Snakemake features a [native Slurm executor](https://snakemake.readthedocs.io/en/stable/executing/cluster.html#executing-on-slurm-clusters),
+which will send jobs to Slurm instead of running them locally. To use it simply add the `--slurm` argument to
+your snakemake command.
 
 !!! Note
 
