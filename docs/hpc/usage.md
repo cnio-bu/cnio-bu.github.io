@@ -92,18 +92,11 @@ To request high-performance scratch space for a new project please fill the
 You can check your current quotas with the following commands:
 
 ```bash
-$ zfs get userquota@$(whoami) homepool/home #check your home quota
+$ zfs get userquota@$(whoami) homepool/home # check your home quota
 
-$ lfs quota -u $(whoami) -h /storage/scratch01/ #check your scratch quota
+$ quotr quota list # check your scratch quotas
 
-$ lfs quota -p <project id> -h /storage/scratch01/ #check your project quota
 ```
-
-!!! Note
-
-    We are currently reimplementing the way quotas are managed. For now you'll
-    need to request your project id from the administrators if you'd like to
-    check project-level quotas.
 
 ### Copying data to/from the cluster
 
