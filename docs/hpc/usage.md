@@ -80,7 +80,7 @@ You have an allocation of 300Gb in your home directory, located in
 You have an allocation of 500Gb in your "scratch" directory, located at
 `/storage/scratch01/users/<yourusername>/`.
 
-This space is meant to be used for testing and ephimeral compute operations.
+This space is meant to be used for testing and ephemeral compute operations.
 
 ##### Project space
 
@@ -188,12 +188,12 @@ You can check how efficiently a job used its assigned resources with the `seff <
 !!! Warning
 
     The previous way of having Snakemake send jobs to the nodes using a profile (`--profile $SMK_PROFILE_SLURM`)
-    is still functional but is deprecated. You should ideally move to the native executor described below, and report
+    is still functional but deprecated. You should ideally move to the native executor described below, and report
     any issues to the list. 
 
 Snakemake features a [native Slurm executor](https://snakemake.readthedocs.io/en/stable/executing/cluster.html#executing-on-slurm-clusters),
 which will send jobs to Slurm instead of running them locally. To use it simply add the `--slurm` argument to
-your snakemake command.
+your `snakemake` command.
 
 !!! Note
 
@@ -231,7 +231,7 @@ The cluster features two Nvidia A100 GPUs, each split into 4 instances with 20Gb
 
 To run a command using GPUs you need to specify the `gpu` partition, and request
 the number of instances you require using the
-`--gres=gpu:1g.20gb:<number_of_instances>` argument of sbatch. Here's an example
+`--gres=gpu:1g.20gb:<number_of_instances>` argument of `sbatch`. Here's an example
 to request two instances:
 
 `sbatch -p gpu --gres=gpu:1g.20gb:2 --wrap "python train_my_net.py"`
