@@ -227,14 +227,14 @@ For example, to request a 2-hour session with 4Gb RAM and 2 CPUs, you would do:
 
     All GPU-related information is subject to change.
 
-The cluster features two Nvidia A100 GPUs, each split into 4 instances with 20Gb of VRAM, for a total of 8x20Gb instances.
+The cluster features two Nvidia A100 GPUs with 80Gb of VRAM each.
 
 To run a command using GPUs you need to specify the `gpu` partition, and request
-the number of instances you require using the
-`--gres=gpu:1g.20gb:<number_of_instances>` argument of `sbatch`. Here's an example
-to request two instances:
+the number of GPUs you require (1 or 2, in this case) using the
+`--gres=gpu:<number_of_gpus>` argument of `sbatch`. Here's an example
+to run a python script with one GPU:
 
-`sbatch -p gpu --gres=gpu:1g.20gb:2 --wrap "python train_my_net.py"`
+`sbatch -p gpu --gres=gpu:1 --wrap "python train_my_net.py"`
 
 ### Installing software
 
