@@ -6,14 +6,15 @@ These are some guidelines to using our HPC cluster and the Slurm workflow system
 
 ### Compute nodes
 
-The cluster currently features 8 compute nodes with the following configurations:
+The cluster currently features 12 compute nodes with the following configurations:
 
- Node | CPUs | RAM | GPUs
------ | ---- | ---- | ----
-bc001 | 24   | 32Gb | -
-bc00[2-7] | 52   | 512Gb | -
-hm001 | 224  | 2Tb | -
-gp001 | 112  | 768Gb | 2 x Nvidia A100 80Gb
+Count | Node names | CPU cores | RAM   | GPUs
+----- | ---------- | --------- | ----  | ----
+1     | bc001      | 24        | 32Gb    -
+6     | bc00[2-7]  | 52        | 512Gb | -
+3     | bc00[8-10] | 128       | 1Tb   | -
+1     | hm001      | 224       | 2Tb   | -
+1     | gp001      | 112       | 768Gb | 2 x Nvidia A100 80Gb
 
 <br />
 
