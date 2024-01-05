@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-01-05T13:38:36.424Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="ZRmNCIL7rpeuBE24urxO" version="22.1.16" type="device">
+<mxfile host="app.diagrams.net" modified="2024-01-05T13:46:16.128Z" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:121.0) Gecko/20100101 Firefox/121.0" etag="PHymTDPTic4N4r58fSwR" version="22.1.16" type="device">
   <diagram id="dK4zDFjCwPvc2o_Zu-HG" name="Page-1">
-    <mxGraphModel dx="819" dy="501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -40,7 +40,7 @@
         <mxCell id="eVVcJiLUGC9efGw6YGq7-20" value="Bullion" style="strokeColor=#666666;html=1;labelPosition=right;align=left;spacingLeft=15;shadow=0;dashed=0;outlineConnect=0;shape=mxgraph.rack.dell.dell_poweredge_2u;" parent="eVVcJiLUGC9efGw6YGq7-16" vertex="1">
           <mxGeometry x="9" y="385" width="162" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="eVVcJiLUGC9efGw6YGq7-37" value="&lt;div&gt;cluster-head1&lt;/div&gt;" style="shape=mxgraph.rack.hp.hp_proliant_sl230s_g8;html=1;labelPosition=left;align=right;spacingLeft=0;dashed=0;shadow=0;fillColor=#ffffff;verticalLabelPosition=middle;verticalAlign=middle;spacingRight=16;" parent="eVVcJiLUGC9efGw6YGq7-47" vertex="1">
+        <mxCell id="eVVcJiLUGC9efGw6YGq7-37" value="&lt;div&gt;cluster1-head1&lt;/div&gt;" style="shape=mxgraph.rack.hp.hp_proliant_sl230s_g8;html=1;labelPosition=left;align=right;spacingLeft=0;dashed=0;shadow=0;fillColor=#ffffff;verticalLabelPosition=middle;verticalAlign=middle;spacingRight=16;" parent="eVVcJiLUGC9efGw6YGq7-47" vertex="1">
           <mxGeometry x="10" y="215" width="81" height="15" as="geometry" />
         </mxCell>
         <mxCell id="eVVcJiLUGC9efGw6YGq7-38" value="&lt;div&gt;bc006&lt;/div&gt;" style="shape=mxgraph.rack.hp.hp_proliant_sl230s_g8;html=1;labelPosition=right;align=left;spacingLeft=15;dashed=0;shadow=0;fillColor=#ffffff;" parent="eVVcJiLUGC9efGw6YGq7-47" vertex="1">
