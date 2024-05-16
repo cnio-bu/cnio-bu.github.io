@@ -232,19 +232,24 @@ For example, to request a 2-hour session with 4Gb RAM and 2 CPUs, you would do:
 
 !!! Warning
 
-    GPU access is currently being tested and should be requested to
-    [hpc-admin@lists.cnio.es](mailto:hpc-admin@lists.cnio.es).
-
-    All GPU-related information is subject to change.
+    GPU usage is "experimental". Please expect changes in the setup
+    (which will be announced through the [mailing list](#mailing-list)).
 
 The cluster features two Nvidia A100 GPUs with 80Gb of VRAM each.
 
-To run a command using GPUs you need to specify the `gpu` partition, and request
-the number of GPUs you require (1 or 2, in this case) using the
-`--gres=gpu:<number_of_gpus>` argument of `sbatch`. Here's an example
-to run a python script with one GPU:
+The GPUs are split into instances of different capacities in order to increase
+usability. Available instances are:
 
-`sbatch -p gpu --gres=gpu:1 --wrap "python train_my_net.py"`
+- 1 x **7g.80gb**: 80Gb of GPU VRAM and 7 streaming multiprocessors
+- 3 x **2g.20gb**: 20Gb of GPU VRAM and 2 streaming multiprocessors
+- 1 x **1g.20gb**: 20Gb of GPU VRAM and 1 streaming multiprocessors
+
+To run a command using GPUs you need to specify the `gpu` partition, and request
+the GPU instances you require using the
+`--gres=gpu:<instance_name>:<number_of_gpus>` argument of `sbatch`. Here's an example
+to run a python script with two 2g.20gb instances:
+
+`sbatch -p gpu --gres=gpu:2g.20gb:2 --wrap "python train_my_net.py"`
 
 ### Installing software
 
