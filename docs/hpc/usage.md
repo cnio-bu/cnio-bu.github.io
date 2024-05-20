@@ -201,8 +201,8 @@ You can check how efficiently a job used its assigned resources with the `seff <
     is still functional but deprecated. You should ideally move to the native executor described below, and report
     any issues to the list. 
 
-Snakemake features a [native Slurm executor](https://snakemake.readthedocs.io/en/stable/executing/cluster.html#executing-on-slurm-clusters),
-which will send jobs to Slurm instead of running them locally. To use it simply add the `--slurm` argument to
+Snakemake features a [Slurm executor plugin](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html),
+which will send jobs to Slurm instead of running them locally. After installing it, simply add the `--executor slurm` argument to
 your `snakemake` command.
 
 !!! Note
