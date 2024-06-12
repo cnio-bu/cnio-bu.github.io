@@ -1,7 +1,7 @@
 # How to setup a conda environment for GPU-accelerated single cell analysesf
 This is by no means an extensive guide as things are moving fast in the single cell field, but should give you a decent starting point to setup  your libraries and packages to accelerate single cell analyses using the CNIO's GPU nodes.
 
-# Create a new conda environment from a GPU node
+## Create a new conda environment from a GPU node
 This can be done automatically by running a job using sbatch and a bash script to create and install de conda packages. To launch a job using the GPU, you can just specify the **partition** with:
 
 ```bash
@@ -28,10 +28,10 @@ mamba install pytorch torchvision torchaudio pytorch-cuda=11.8 cuda-nvcc=11.8 -c
 mamba install jax jaxlib -c conda-forge
 ```
 
-## Important notice
+### Important
 Keep in mind that conda/mamba will default to a CPU based compilation of CUDA/lightning and other libraries If you try to install them from a head node or from any worker node that has not a GPU.
 
-# Verify that CUDA is working
+## Verify that CUDA is working
 From an interactive session inside the GPU node or from a python script, execute:
 
 ```python
@@ -45,7 +45,7 @@ b) CUDA was not installed properly and It's not working.
 
 
 
-# Install scvi-tools from pip
+## Install scvi-tools from pip
 I do not know how or why, but somehow conda/mamba manages to pull an ancient version
 of scvi-tools after installing the correct libraries, so we'll install scvi with pip
 
@@ -53,7 +53,7 @@ of scvi-tools after installing the correct libraries, so we'll install scvi with
 pip install scvi-tools
 ```
 
-# Verify that all of the libraries are working
+## Verify that all of the libraries are working
 From an interactive session inside the GPU node or from a python script, execute:
 
 ```python3
