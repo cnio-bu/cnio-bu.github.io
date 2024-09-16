@@ -14,7 +14,7 @@ Count | Node names | CPU cores | RAM   | GPUs
 6     | bc00[2-7]  | 52        | 512Gb | -
 3     | bc00[8-10] | 128       | 1Tb   | -
 1     | hm001      | 224       | 2Tb   | -
-1     | gp001      | 112       | 768Gb | 2 x Nvidia A100 80Gb
+1     | gp001      | 112       | 768Gb | 3 x Nvidia A100 80Gb
 
 <br />
 
@@ -25,7 +25,7 @@ and 512Tb of high performance storage (for compute jobs input and output).
 
 ### Paragraph for adding to grant applications, etc.
 
-> The CNIO HPC cluster currently consists on: two login nodes working in active/passive mode (2x 40 core/392Gb RAM); a total of 728 compute cores distributed in 9 "standard" compute nodes (6x 52 core/512Gb RAM and 3x 64core/768Gb RAM) and a high-memory node (1x 224 core/2Tb RAM); a dedicated GPU node featuring 2 x Nvidia A100 80Gb GPUs. Local storage is composed of 48 4TB disks in a dual-channel enclosure organized into a RAID-10 unit with an effective available storage of 172TB which host the home directories, and a high-performance lustre storage system with 512 TB of effective available storage for computation. The cluster runs a Slurm queuing system with fairshare priority management. 
+> The CNIO HPC cluster currently consists on: two login nodes working in active/passive mode (2x 40 core/392Gb RAM); a total of 728 compute cores distributed in 9 "standard" compute nodes (6x 52 core/512Gb RAM and 3x 64core/768Gb RAM) and a high-memory node (1x 224 core/2Tb RAM); a dedicated GPU node featuring 3 x Nvidia A100 80Gb GPUs. Local storage is composed of 48 4TB disks in a dual-channel enclosure organized into a RAID-10 unit with an effective available storage of 172TB which host the home directories, and a high-performance lustre storage system with 512 TB of effective available storage for computation. The cluster runs a Slurm queuing system with fairshare priority management.
 
 ## Cluster usage
 
@@ -235,7 +235,7 @@ For example, to request a 2-hour session with 4Gb RAM and 2 CPUs, you would do:
     GPU usage is "experimental". Please expect changes in the setup
     (which will be announced through the [mailing list](#mailing-list)).
 
-The cluster features two Nvidia A100 GPUs with 80Gb of VRAM each.
+The cluster features three Nvidia A100 GPUs with 80Gb of VRAM each.
 
 To run a command using GPUs you need to specify the `gpu` partition, and request
 the number of GPUs you require using the
