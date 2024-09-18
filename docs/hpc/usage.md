@@ -104,7 +104,7 @@ You can check your current quotas with the following commands:
 ```bash
 $ zfs get userquota@$(whoami) homepool/home # check your home quota
 
-$ quotr quota list # check your scratch quotas
+$ quotr quota list --long # check your scratch quotas
 
 ```
 
