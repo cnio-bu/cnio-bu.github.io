@@ -21,6 +21,9 @@ extra_css:
 
 nav:
   - Home: index.md
+  - BU organisation:
+    - Chat: org/chat.md
+    - Calendar: org/calendar.md
   - Development:
     - 'Development guidelines': dev.md
   - HPC resources:
