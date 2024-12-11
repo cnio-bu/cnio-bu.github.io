@@ -154,6 +154,21 @@ For example, to submit the command `bwa index mygenome.fasta` as a job:
 
 `-c`, `--mem`, and `-t` tell the system how many cores, RAM memory, and time your job will need.
 
+##### Thread management
+
+Many programs can spawn additional threads beyond what you explicitly request through the `-c` parameter.
+This can lead to oversubscription of CPU resources and negatively impact both your job and others running
+on the same node. For example, some Python libraries (like NumPy), R packages, or bioinformatics tools
+might automatically use multiple threads based on the available CPU cores, regardless of your Slurm allocation.
+
+To prevent this:
+
+- Look for program-specific thread control options (e.g., `--threads`, `-t`, etc.)
+- If applicable, consider setting environment variables like `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, `MKL_NUM_THREADS`, and `NUMEXPR_NUM_THREADS` to match your requested cores
+- When using workflow managers like Snakemake or Nextflow, ensure they properly propagate resource constraints to their child processes
+
+Please check [this message on the mailing list](https://lists.cnio.es/wws/arc/hpc/2024-12/msg00000.html) for more details and an example.
+
 ##### Time limits
 
 !!! Note
