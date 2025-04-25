@@ -230,6 +230,26 @@ your `snakemake` command.
     The Snakemake command will remain active while your jobs run, so it's recommended that you launch it inside a detachable terminal emulator (e.g. [GNU Screen](https://www.nixtutor.com/linux/introduction-to-gnu-screen/))
     so you can disconnect from the cluster and keep your jobs running.
 
+##### Getting information for jobs submitted via Snakemake
+
+Text extracted from the [Snakemake Slurm executor docs](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html#inquiring-about-job-information-and-adjusting-the-rate-limiter)
+
+The executor plugin for SLURM uses unique job names to inquire about job status. It ensures inquiring about job status for the series of jobs of a workflow does not put too much strain on the batch system’s database. Human readable information is stored in the comment of a particular job. It is a combination of the rule name and wildcards. You can ask for it with the sacct or squeue commands, for example:
+
+```bash
+sacct -o JobID,State,Comment%40
+```
+
+Note, the “%40” after Comment ensures a width of 40 characters. This setting may be changed at will. If the width is too small, SLURM will abbreviate the column with a + sign.
+
+For running jobs, you can use the squeue command:
+
+```bash
+squeue -u $USER -o %i,%P,%.10j,%.40k
+```
+
+Here, the .<number> settings for the ID and the comment ensure a sufficient width, too.
+
 #### Interactive sessions
 
 During development and testing you may want to be able to run commands interactively. You can request
