@@ -282,11 +282,10 @@ to run a python script with one GPU:
 ### Installing software
 
 Software management is left up to the user, and we recommend doing it by installing
-[mambaforge](https://github.com/conda-forge/miniforge#mambaforge) and the [bioconda channels](https://bioconda.github.io/user/install.html#set-up-channels).
+[miniforge](https://github.com/conda-forge/miniforge#unix-like-platforms-macos-linux--wsl) and the [bioconda channels](https://bioconda.github.io/).
 
 If you're completely unfamiliar with conda and bioconda, we recommend following
-[this tutorial](https://bioconda.github.io/tutorials/index.html). Notice that the tutorial 
-uses miniconda, which is equivalent to the recommended mambaforge.
+[this tutorial](https://bioconda.github.io/tutorials/index.html).
 
 !!! Note
 
