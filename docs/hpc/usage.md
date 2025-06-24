@@ -154,6 +154,12 @@ For example, to submit the command `bwa index mygenome.fasta` as a job:
 
 `-c`, `--mem`, and `-t` tell the system how many cores, RAM memory, and time your job will need.
 
+!!! Note
+
+    Unless otherwise specified, jobs will get a default of 1 core, 2Gb of RAM,
+    and a time limit of 30 minutes.
+
+
 ##### Thread management
 
 Many programs can spawn additional threads beyond what you explicitly request through the `-c` parameter.
@@ -177,9 +183,6 @@ Please check [this message on the mailing list](https://lists.cnio.es/wws/arc/hp
     Shorter jobs may cause too much scheduling overhead, and longer jobs
     will make it harder for the scheduler to optimally schedule jobs into the
     queues.
-
-If no time limit is specified, a default of 30 minutes will be assigned
-automatically.
 
 The "short" queue has a limit of 2 hours per job and the highest priority
 (i.e. jobs in this queue will run sooner compared to other queues).
