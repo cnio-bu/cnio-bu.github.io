@@ -102,7 +102,7 @@ To request high-performance scratch space for a new project please fill the
 You can check your current quotas with the following commands:
 
 ```bash
-$ zfs get userquota@$(whoami) homepool/home # check your home quota
+$ zfs get -r -o name,property,value userquota@$(whoami),userused@$(whoami) homepool2/home
 
 $ quotr quota list --long # check your scratch quotas
 
