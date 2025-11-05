@@ -29,7 +29,3 @@ nav:
   - HPC resources:
     - 'Usage': hpc/usage.md
     - 'Administration': hpc/admin.md
-  - 'Systems administration':
-    - 'Common tasks':
-      - 'Set up new workstations': admin/tasks.md
-    - 'Workstations inventory': admin/inventory.md
