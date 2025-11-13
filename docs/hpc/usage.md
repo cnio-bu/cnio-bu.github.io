@@ -326,7 +326,7 @@ Software management is left up to the user, and we recommend doing it by install
 [miniforge](https://github.com/conda-forge/miniforge#unix-like-platforms-macos-linux--wsl) and the [bioconda channels](https://bioconda.github.io/).
 
 If you're completely unfamiliar with conda and bioconda, we recommend following
-[this tutorial](https://bioconda.github.io/tutorials/index.html).
+[this tutorial](https://bioconda.github.io/tutorials/gcb2020.html).
 
 !!! Note
 
