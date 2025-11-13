@@ -281,6 +281,45 @@ to run a python script with one GPU:
 
 `sbatch -p gpu --gres=gpu:A100:1 --wrap "python train_my_net.py"`
 
+##### Installing software with GPU support
+
+When installing software that requires GPU support (e.g., deep learning frameworks with CUDA),
+it's important to perform the installation on a GPU node rather than on the head node.
+Installing on the head node, which lacks GPUs, may result in CPU-only versions of libraries
+being installed automatically, even when GPU-enabled versions are available.
+
+There are two recommended approaches for installing GPU-enabled software:
+
+**Option 1: Interactive session on GPU node**
+
+Request an interactive session on the GPU node to install software or create conda environments:
+
+```
+srun -p gpu --gres=gpu:A100:1 --mem=8192 -c 4 -t 120 --pty /bin/bash
+```
+
+Once connected to the GPU node, verify GPU access:
+
+```
+nvidia-smi
+```
+
+Then proceed with your software installation (e.g., creating conda environments, installing packages with pip/conda).
+
+**Option 2: Installation via batch job**
+
+Alternatively, you can submit the installation commands as a batch job that runs on the GPU node:
+
+```
+sbatch -p gpu --gres=gpu:A100:1 --mem=8192 -c 4 -t 60 --wrap "conda create -n myenv python=3.10 && conda activate myenv && conda install <packages>"
+```
+
+**Verifying GPU access**
+
+After installation, verify that your software can access the GPU by running `nvidia-smi` or
+using framework-specific commands to check CUDA availability. This ensures that the GPU-enabled
+versions were correctly installed.
+
 ### Installing software
 
 Software management is left up to the user, and we recommend doing it by installing
