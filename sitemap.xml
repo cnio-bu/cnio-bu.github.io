@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://cnio-bu.github.io/</loc>
+         <lastmod>2025-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cnio-bu.github.io/dev/</loc>
+         <lastmod>2025-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cnio-bu.github.io/hpc/admin/</loc>
+         <lastmod>2025-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cnio-bu.github.io/hpc/usage/</loc>
+         <lastmod>2025-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cnio-bu.github.io/org/calendar/</loc>
+         <lastmod>2025-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://cnio-bu.github.io/org/chat/</loc>
+         <lastmod>2025-11-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
