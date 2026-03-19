@@ -183,6 +183,17 @@ Please check [this message on the mailing list](https://lists.cnio.es/wws/arc/hp
     will make it harder for the scheduler to optimally schedule jobs into the
     queues.
 
+!!! Warning
+
+    **Always request a time limit close to the actual expected duration of your job,
+    not the maximum allowed by the queue.** For example, if your job takes 1 hour,
+    request ~90 minutes, not 24 hours. Over-requesting time wastes your
+    priority (see [below](#resources-and-their-effect-on-job-priority)) and
+    prevents the scheduler from *backfilling* your job: if there is a 2-hour gap
+    before a higher-priority job starts, a job with `-t90` can be backfilled into
+    that gap and start immediately, while the same job with `-t1440` (24 h) cannot
+    and will sit in the queue waiting.
+
 The "short" queue has a limit of 2 hours per job and the highest priority
 (i.e. jobs in this queue will run sooner compared to other queues).
 
