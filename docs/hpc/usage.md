@@ -107,6 +107,22 @@ $ quotr quota list --long # check your scratch quotas
 
 ```
 
+#### Temporary files (/tmp)
+
+!!! Warning
+
+    **Do not write large files to `/tmp`.**
+    `/tmp` resides on the root filesystem, which is shared
+    by the operating system and all users. Writing large temporary files there
+    (e.g. aligner indexes, sorting buffers) can fill it up, causing the head
+    node to crash and affecting all users on the cluster.
+
+    Use your scratch directories (`/storage/scratch01/groups/<yourgroup>/<yourproject>` 
+    or `/storage/scratch01/users/<yourusername>/`)
+    for any temporary or intermediate files instead. See
+    [Temporary files in pipelines](#temporary-files-in-pipelines) for how to
+    configure common tools and workflow managers.
+
 ### Copying data to/from the cluster
 
 The most efficient way of copying large amounts of data is by using `rsync`. `rsync` allows
@@ -262,6 +278,49 @@ squeue -u $USER -o %i,%P,%.10j,%.40k
 ```
 
 Here, the .<number> settings for the ID and the comment ensure a sufficient width, too.
+
+##### Temporary files in pipelines
+
+Many bioinformatics tools write temporary data to `/tmp` by default. Since
+`/tmp` is on the small root filesystem (see [above](#temporary-files-tmp)),
+you should always redirect temporary files to your scratch space.
+
+**Setting `TMPDIR` globally**
+
+The simplest approach is to set the `TMPDIR` environment variable before
+launching your pipeline. Most tools respect it automatically:
+
+```bash
+export TMPDIR=/storage/scratch01/users/$(whoami)/tmp
+mkdir -p "$TMPDIR"
+```
+
+**Snakemake `resources: tmpdir`**
+
+You can set the temp directory per rule using the
+[resources](https://snakemake.readthedocs.io/en/stable/snakefiles/rules.html#resources)
+directive:
+
+```python
+rule align:
+    resources:
+        tmpdir="/storage/scratch01/users/myuser/tmp"
+    ...
+```
+
+Or pass it globally on the command line:
+
+```bash
+snakemake --executor slurm --default-resources 'tmpdir="/storage/scratch01/users/myuser/tmp"'
+```
+
+**Tool-specific options**
+
+Some tools have their own flags for controlling the temp directory. Here are some examples:
+
+- **STAR**: `--outTmpDir /storage/scratch01/users/myuser/tmp/STARtmp`
+- **samtools sort**: `-T /storage/scratch01/users/myuser/tmp/samtools`
+- **GATK / Picard**: `--tmp-dir /storage/scratch01/users/myuser/tmp`
 
 #### Interactive sessions
 
