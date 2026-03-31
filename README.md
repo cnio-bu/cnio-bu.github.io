@@ -8,7 +8,7 @@ website located at https://cnio-bu.github.io
 To work locally with this project, you'll have to follow the steps below:
 
 1. Fork, clone or download this project
-1. Install MkDocs (available in conda)
+1. Install MkDocs (e.g. `conda create -n mkdocs mkdocs mkdocs-material`)
 1. Preview your project: `mkdocs serve`,
    your site can be accessed under `localhost:8000`
 1. Add content
