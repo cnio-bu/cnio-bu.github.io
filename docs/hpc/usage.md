@@ -237,7 +237,7 @@ time limits (a.k.a. *walltimes*) to your jobs.
 
 You can check how efficiently a job used its assigned resources with the `seff <jobid>` command (once the job is finished).
 
-#### Snakemake executor for Slurm
+#### Running Snakemake jobs on the compute nodes
 
 !!! Warning
 
