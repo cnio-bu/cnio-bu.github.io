@@ -241,13 +241,21 @@ You can check how efficiently a job used its assigned resources with the `seff <
 
 !!! Warning
 
-    The previous way of having Snakemake send jobs to the nodes using a profile (`--profile $SMK_PROFILE_SLURM`)
-    is still functional but deprecated. You should ideally move to the native executor described below, and report
-    any issues to the list. 
+    By default, Snakemake runs all jobs locally on the machine where you
+    launch it. On the cluster, that means the head node. **You must use a
+    Slurm executor** so that Snakemake submits jobs to the compute nodes
+    instead. Running pipelines on the head node can exhaust its resources
+    and cause it to crash, affecting all users.
 
 Snakemake features a [Slurm executor plugin](https://snakemake.github.io/snakemake-plugin-catalog/plugins/executor/slurm.html),
 which will send jobs to Slurm instead of running them locally. After installing it, simply add the `--executor slurm` argument to
 your `snakemake` command.
+
+!!! Warning
+
+    The previous way of having Snakemake send jobs to the nodes using a profile (`--profile $SMK_PROFILE_SLURM`)
+    is still functional but deprecated. You should ideally move to the native executor described below, and report
+    any issues to the list. 
 
 !!! Note
 
