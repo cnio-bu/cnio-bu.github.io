@@ -70,11 +70,19 @@ to stay up to date. The list has very low traffic.
 
 !!! Warning
 
-    Scratch space is to be considered "volatile": you should copy your
-    input files, execute, copy your output files, and delete everything.
+    **Scratch space is not long term storage, and it is not backed up.**
+
+    Treat it as volatile: copy in your input files, run your analysis, copy
+    your results out to a safe location, and delete everything else. This
+    applies to project space exactly as much as it does to your personal
+    scratch directory.
+
+    Anything that exists only in scratch can be lost, and it will not be
+    recoverable. Keeping a copy elsewhere is your responsibility.
 
     Home directories are not volatile, but data safety is not guaranteed in
-    the long term (so keep backups).
+    the long term, so keep your own backups of anything you cannot
+    regenerate.
 
 
 #### Home directories
